@@ -1,0 +1,120 @@
+{
+  "$schema": "./node_modules/@effect/tsgo/schema.json",
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    // "rootDir": "./src",
+    // "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "types": ["node"],
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "name": "@effect/language-service",
+        "diagnosticSeverity": {
+          "acquireReleaseDisposable": "warning",
+          "allOfMapToForEach": "warning",
+          "anyUnknownInErrorContext": "warning",
+          "catchAllTagDispatchToCatchTag": "warning",
+          "catchAllToMapError": "warning",
+          "catchChainToFirstSuccessOf": "warning",
+          "catchConditionalRefailToCatchIf": "warning",
+          "catchDieToOrDie": "warning",
+          "catchIfTagToCatchTag": "warning",
+          "catchRefailToTapError": "warning",
+          "catchTagToCatchReason": "warning",
+          "catchToIgnore": "warning",
+          "catchToOrElseSucceed": "warning",
+          "catchUnfailableEffect": "warning",
+          "deterministicKeys": "warning",
+          "effectDoNotation": "warning",
+          "effectFnOpportunity": "warning",
+          "effectMapFlatten": "warning",
+          "effectMapVoid": "warning",
+          "effectSleepZeroToYieldNow": "warning",
+          "effectSucceedWithVoid": "warning",
+          "errorPayloadShadowsName": "warning",
+          "flatMapConditionalToFilterOrFail": "warning",
+          "flatMapIgnoredParamToAndThen": "warning",
+          "flatMapToMap": "warning",
+          "flatMapToTap": "warning",
+          "lazyEffect": "warning",
+          "leakingRequirements": "warning",
+          "mapSomeToAsSome": "warning",
+          "matchEffectToMapBoth": "warning",
+          "matchEffectToMatch": "warning",
+          "missedPipeableOpportunity": "warning",
+          "missingEffectServiceDependency": "warning",
+          "missingPipeableSignature": "warning",
+          "multipleCatchTag": "warning",
+          "nestedEffectGenYield": "warning",
+          "newSchemaClass": "warning",
+          "optionMatchToFromOption": "warning",
+          "preferBarrelImport": "warning",
+          "preferNamespaceImport": "warning",
+          "preferSchemaTaggedError": "warning",
+          "preferSchemaTypeProperty": "warning",
+          "preferSucceedSomeOrNone": "warning",
+          "preferTypedSchemaDecoder": "warning",
+          "preferUnsafeConstructor": "warning",
+          "provideLayerSucceedToProvideService": "warning",
+          "raceFirstWithSleepToTimeout": "warning",
+          "redundantMapError": "warning",
+          "redundantOrDie": "warning",
+          "redundantSchemaTagIdentifier": "warning",
+          "returnEffectInGen": "warning",
+          "runEffectInsideEffect": "warning",
+          "runOfExitToRunExit": "warning",
+          "schemaClassMissingBrand": "warning",
+          "schemaNumber": "warning",
+          "schemaStructWithTag": "warning",
+          "schemaSyncInEffect": "warning",
+          "schemaUnionOfLiterals": "warning",
+          "serviceNotAsClass": "warning",
+          "strictBooleanExpressions": "warning",
+          "strictEffectProvide": "warning",
+          "syncToSucceed": "warning",
+          "timeoutCatchTagToTimeoutOrElse": "warning",
+          "tryCatchInEffectGen": "warning",
+          "unnecessaryArrowBlock": "warning",
+          "unnecessaryEffectGen": "warning",
+          "unnecessaryFailYieldableError": "warning",
+          "unnecessaryPipe": "warning",
+          "unnecessaryPipeChain": "warning",
+          "unnecessaryTypeofType": "warning",
+          "unsafeEffectTypeAssertion": "warning"
+        }
+      }
+    ]
+  }
+}
