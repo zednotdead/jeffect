@@ -1,8 +1,8 @@
 {
   pkgs,
-  lib,
-  config,
-  inputs,
+  # lib,
+  # config,
+  # inputs,
   ...
 }: let
   db = {
@@ -11,6 +11,8 @@
     pass = "jeff";
   };
 in {
+  packages = with pkgs; [httpie];
+
   env.DATABASE_URL = "postgres://${db.user}:${db.pass}@localhost:5432/${db.name}";
 
   languages.javascript = {

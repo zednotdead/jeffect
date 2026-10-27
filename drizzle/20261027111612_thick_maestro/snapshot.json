@@ -2,12 +2,18 @@
   "type": "base",
   "version": "9",
   "dialect": "postgres",
-  "id": "d64ba867-a653-4fa0-bf8d-01963cd266b3",
-  "prevIds": ["00000000-0000-0000-0000-000000000000"],
+  "id": "1da00cde-fad2-49e6-ade8-5ce9e3b6799d",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
   "footprints": [
     {
       "statementType": "create_table",
-      "statementTarget": ["table", "public", "users"],
+      "statementTarget": [
+        "table",
+        "public",
+        "users"
+      ],
       "writes": [
         "s|tbl|public.users",
         "n|tbl|public.users",
@@ -16,7 +22,9 @@
         "n|type|public.users",
         "n|rel|public.users_pkey"
       ],
-      "reads": ["n|sch|public"]
+      "reads": [
+        "n|sch|public"
+      ]
     }
   ],
   "ddl": [
@@ -30,22 +38,13 @@
       "schema": "public",
       "table": "users",
       "name": "id",
-      "type": "integer",
+      "type": "uuid",
       "typeSchema": null,
       "notNull": true,
       "dimensions": 0,
-      "default": null,
+      "default": "uuidv7()",
       "generated": null,
-      "identity": {
-        "type": "always",
-        "name": "users_id_seq",
-        "increment": "1",
-        "startWith": "1",
-        "minValue": "1",
-        "maxValue": "2147483647",
-        "cache": 1,
-        "cycle": false
-      },
+      "identity": null,
       "entityType": "columns"
     },
     {
@@ -91,7 +90,9 @@
       "schema": "public",
       "table": "users",
       "name": "users_pkey",
-      "columns": ["id"],
+      "columns": [
+        "id"
+      ],
       "nameExplicit": false,
       "entityType": "pks"
     }
